@@ -27,7 +27,7 @@ Les bibliothèques Python suivantes :
 Étapes d'installation
 
 Clonez le dépôt GitHub :
-   git clone https://github.com/votre_nom_utilisateur/htrack.git
+   git clone https://github.com/NdandaClaude/htrack.git
    cd htrack
    Installez les dépendances nécessaires :
    pip install -r requirements.txt
