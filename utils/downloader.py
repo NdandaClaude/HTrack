@@ -20,19 +20,18 @@ def download_site(url, output_dir, logger, file_types):
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")
 
-        # Enregistrer la page HTML principale
+      
         main_page = os.path.join(output_dir, "index.html")
         with open(main_page, "w", encoding="utf-8") as f:
             f.write(soup.prettify())
         logger.info(f"Page principale enregistrée : {main_page}")
 
-        # Extraire toutes les ressources à télécharger
+       
         resources = []
         for tag, attr in [("link", "href"), ("script", "src"), ("img", "src")]:
             for resource in soup.find_all(tag):
                 if attr in resource.attrs:
                     resource_url = urljoin(url, resource[attr])
-                    # Filtrer par type de fichier
                     if any(resource_url.endswith(f".{ext}") for ext in file_types):
                         resources.append(resource_url)
 
@@ -64,7 +63,7 @@ def download_resource(resource_url, output_dir, logger):
 
         file_path = os.path.join(output_dir, filename)
 
-        # Télécharger le contenu par chunks
+      
         total_size = int(response.headers.get('content-length', 0))
         with open(file_path, "wb") as f:
             for chunk in response.iter_content(1024):
