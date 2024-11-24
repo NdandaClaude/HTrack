@@ -1,6 +1,6 @@
 HTrack 
 
-HTrack est un puissant outil en Python pour cloner intégralement des sites web. Il permet de télécharger les ressources HTML, CSS, JavaScript, images, vidéos, et bien plus, tout en offrant une interface utilisateur simple et professionnelle.
+HTrack est un puissant outil en Python pour cloner intégralement des sites web. Il permet de télécharger les ressources HTML, CSS, JavaScript, images, vidéos, et bien plus.
 
 
 🎯 Fonctionnalités
@@ -9,7 +9,6 @@ HTrack est un puissant outil en Python pour cloner intégralement des sites web.
    🔍 Filtrage des ressources à télécharger par type de fichier (HTML, CSS, JS, PNG, etc.).
    🛠 Personnalisation du répertoire de sortie.
    📜 Affichage des logs récents pour le suivi des opérations.
-   🔧 Interface interactive avec un menu facile à utiliser.
    ✅ Compatible avec les sites web modernes.
 
 
@@ -33,7 +32,7 @@ Clonez le dépôt GitHub :
    pip install -r requirements.txt
 
 Lancez l'application :
-   python htrack.py
+   python cloner.py
 
 📝 Utilisation
 
