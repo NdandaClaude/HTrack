@@ -12,6 +12,8 @@ def download_site(url, output_dir, logger, file_types):
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
+        logger.info(f"path not exists : {output_dir}")
+        logger.info(f"creat path : {output_dir}")
 
     try:
         response = requests.get(url)
@@ -52,14 +54,14 @@ def download_resource(resource_url, output_dir, logger):
         response = requests.get(resource_url, stream=True)
         response.raise_for_status()
 
-        # Nettoyer et limiter le nom du fichier
         parsed_url = urlparse(resource_url)
         filename = os.path.basename(parsed_url.path)
         if not filename or "?" in filename or "&" in filename:
             filename = re.sub(r'[^a-zA-Z0-9_.-]', '_', parsed_url.path)
         filename = filename[:255]
 
-        # Chemin complet pour le fichier
+
+
         file_path = os.path.join(output_dir, filename)
 
         # Télécharger le contenu par chunks
