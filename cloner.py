@@ -25,7 +25,7 @@ def afficher_ascii_htrack():
 
 
 def afficher_menu():
-    """Affiche le menu principal."""
+  
     print("\n=== Menu Principal ===\n")
     print("1. Télécharger un site web complet")
     print("2. Sélectionner les types de fichiers à télécharger")
